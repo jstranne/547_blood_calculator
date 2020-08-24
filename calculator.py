@@ -26,7 +26,8 @@ def HDL_driver():
 def LDL_driver():
 	# Get input
 	ldl = get_LDL_input()
-	# check if hdl is normal
+	# check if ldl is normal
+	result = check_ldl_range(ldl)
 	# output results
 
 
@@ -52,5 +53,13 @@ def get_LDL_input():
     LDL_input = input("Enter your LDL result: ")
     return int(LDL_input)
 
+
+def check_ldl_range(ldl):
+    if(ldl < 200):
+        return "Normal"
+    elif(hdl < 240):
+        return "Borderline High"
+    else:
+        return "High"
 
 interface()
