@@ -68,4 +68,5 @@ def output_ldl_results(result):
     print("Your LDL level is " + result)
 
 
-interface()
+if __name__ == '__main__':
+    interface()
